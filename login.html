@@ -5,16 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
     <title>Log In</title>
 </head>
 
 <body>
-    <div class="everything">
-        <input placeholder="Enter email..."></input>
-        <input type="password" placeholder="Enter password..."></input>
-        <a href="index.html"><button class="anant">LOG IN</button></a>
-        <h4>Don't have an account? Go to <a href="signup.html">signup</a></h4>
-    </div>
+    <form id="login-form">
+        <div class="everything">
+            <input placeholder="Enter email..." id="email"></input>
+            <input type="password" placeholder="Enter password..." id="password"></input>
+            <a href="index.html"><button class="anant">LOG IN</button></a>
+            <h4>Don't have an account? Go to <a href="signup.html">signup</a></h4>
+        </div>
+    </form>
+
+    <script src="JS/auth.js"></script>
+    <script>
+        document
+            .getElementById("login-form")
+            .addEventListener("submit", function (e) {
+                e.preventDefault();
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                login(email, password)
+                    .then(() => {
+                        window.location.href = "index.html";
+                    })
+                    .catch((error) => {
+                        alert("Signup failed: " + error.message);
+                    });
+            });
+
+
+    </script>
 </body>
 
 </html>
