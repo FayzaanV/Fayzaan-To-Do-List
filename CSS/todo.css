@@ -45,6 +45,33 @@ button {
 }
 
 #todoList {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+  width: 100%;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 10px 0;
+}
+
+.thing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  background-color: #e7d61f;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+
+.deleteButton {
+  margin-left: 20px;
+  height: 50px;
+  width: 150px;
+  font-size: 24px;
 }
