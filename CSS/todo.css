@@ -36,9 +36,15 @@ button {
 
 .items {
   background-color: #e7d61f;
+  align-items: center;
   height: 75px;
   margin: 30px;
   width: 500px;
   font-size: 50px;
-  border-radius: 50px;
+  border-radius: 30px;
+}
+
+#todoList {
+  align-items: center;
+  /* justify-content: center; */
 }

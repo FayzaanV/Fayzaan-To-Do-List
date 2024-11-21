@@ -14,7 +14,7 @@ document.getElementById("addItemButton").addEventListener("click", function () {
     // Parse and format the date
     const date = new Date(dateText);
     const formattedDate = `${date.getMonth() + 1
-        }/${date.getDate()}/${date.getFullYear()}`;
+        }/${date.getDate() + 1}/${date.getFullYear()}`;
 
     const listItem = document.createElement("div");
     listItem.className = "todo-item";
